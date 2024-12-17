@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Connexion</title>
+    <style>
+        /* Style global */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2d3f28, #4a7040);
+            color: #333;
+        }
+
+        /* Conteneur principal */
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+            color: #4fd42d;
+            font-size: 1.5rem;
+        }
+
+        /* Style des champs d'entrée */
+        .input-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .input-group input:focus {
+            border-color: #6a11cb;
+            box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+        }
+
+        /* Bouton de connexion */
+        .login-btn {
+            background-color: #4fd42d;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.75rem;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .login-btn:hover {
+            background-color: #4fd42d;
+        }
+
+        /* Liens */
+        .links {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .links a {
+            color: #4fd42d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #2575fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Connexion</h2>
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="email">Adresse Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
+            </div>
+            <button type="submit" class="login-btn">Se connecter</button>
+        </form>
+        <div class="links">
+            <a href="#">Mot de passe oublié ?</a>
+            <span> | </span>
+            <a href="#">Créer un compte</a>
+        </div>
+    </div>
+</body>
+</html>
