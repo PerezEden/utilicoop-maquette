@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription Société</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="inscription-form">
+            <h1>Inscription </h1>
+            
+            <!-- Nom de la société -->
+            <label for="nom_societe">Nom de la société</label>
+            <input type="text" id="nom_societe" name="nom_societe" placeholder="Entrez le nom de la société" required>
+
+            <!-- Email -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Entrez l'email" required>
+
+            <!-- Mot de passe -->
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Entrez le mot de passe" required>
+
+            <!-- Numéro de téléphone -->
+            <label for="telephone">Numéro de téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Entrez le numéro de téléphone" required>
+
+            <!-- Ville -->
+            <label for="ville">Ville</label>
+            <input type="text" id="ville" name="ville" placeholder="Entrez la ville" required>
+
+            <!-- Document KBIS -->
+            <label for="kbis">Document KBIS (moins de 3 mois)</label>
+            <input type="file" id="kbis" name="kbis" accept=".pdf,.jpg,.jpeg,.png" required>
+
+            <!-- Bouton de soumission -->
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <p class="connexion-link">
+            Déjà inscrit ? <a href="connexion.html">Connectez-vous ici</a>
+        </p>
+    </div>
+</body>
+</html>
