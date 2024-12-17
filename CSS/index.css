@@ -1,0 +1,168 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ajout de l'image de fond */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    background-image: url('../Images/artisans3.jpg');
+    background-size: cover; /* L'image couvre toute la page */
+    background-repeat: no-repeat; /* Pas de répétition */
+    background-position: center; /* Centrer l'image */
+}
+
+
+/* Header */
+header {
+    background-color: #73be6f;
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Main Section */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.7); /* Fond blanc semi-transparent */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Welcome Section */
+main section {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+main section h1 {
+    font-size: 2.5rem;
+    color: #73be6f;
+    margin-bottom: 1rem;
+}
+
+main section p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service {
+    background-color: #f1f1f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Join Community Section */
+.join-community {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.join-button {
+    display: inline-block;
+    background-color: #73be6f;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #258820;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre avec opacité */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .join-button {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+
+
+
+
+
+
+}
