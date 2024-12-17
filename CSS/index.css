@@ -17,13 +17,20 @@ body {
     background-position: center; /* Centrer l'image */
 }
 
-
 /* Header */
 header {
     background-color: #73be6f;
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Centrer le logo et les liens */
+    justify-content: space-between; /* Espacement entre le logo et les éléments du menu */
+}
+
+header a .logo {
+    max-width: 100px; /* Augmenter la taille du logo */
+    height: auto; /* Conserver les proportions */
 }
 
 header nav ul {
@@ -151,18 +158,13 @@ footer p {
         gap: 1rem;
     }
 
-    .services {
-        grid-template-columns: 1fr;
+    /* Réduction du logo pour les petits écrans */
+    header a .logo {
+        max-width: 60px; /* Augmenter la taille du logo sur les petits écrans */
+        height: auto;
     }
 
-    .join-button {
+    header nav ul li a {
         font-size: 1rem;
-        padding: 0.6rem 1.5rem;
     }
-
-
-
-
-
-
 }
