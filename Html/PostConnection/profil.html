@@ -3,75 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Profil</title>
     <link rel="stylesheet" href="../../CSS/profil.css"> <!-- Lien vers ton fichier CSS -->
 </head>
 
+<body>
 <!-- Header -->
 <header>
-    <a href="accueil.html">
+    <a href="cagnottes.html">
         <img src="../../Images/logo.png" alt="Logo UtiliCoop" class="logo">
     </a>
     <nav>
         <ul>
-            <li><a href="index.html">Reserver</a></li>
+            <li><a href="reservation.html">Reserver</a></li>
             <li><a href="membres.html">Annuaire</a></li>
             <li><a href="profil.html">Profil</a></li>
-            <li><a href="aPropos.html">À propos</a></li>
+            <li><a href="cagnottes.html">Cagnottes</a></li>
             <li><a href="../index.html">Deconnexion</a></li>
         </ul>
     </nav>
 </header>
 
-<body>
 <div class="container">
+    <!-- Carte de Profil -->
     <div class="profile-card">
-        <!-- Header de profil -->
         <div class="profile-header">
-            <div class="icon">
-                <span class="text-icon">J</span> <!-- Initiale de l'utilisateur -->
-            </div>
-            <div>
-                <h2>Jean Dupont</h2>
-                <p>Dupont Plomberie</p>
-            </div>
+            <div class="icon">👤</div>
+            <h2>Jean Dupont</h2>
         </div>
 
-        <!-- Section des points de fidélité -->
-        <div class="points-section">
-            <div class="flex">
-                <span>Points de fidélité :</span>
-                <span class="points">150 points</span>
-            </div>
+        <!-- Section Informations Utilisateur -->
+        <div class="user-info">
+            <h3>Informations personnelles</h3>
+            <ul>
+                <li><strong>Nom de société:</strong> Dupont Plomberie</li>
+                <li><strong>Email:</strong> jean.dupont@example.com</li>
+                <li><strong>Téléphone:</strong> +33 6 12 34 56 78</li>
+                <li><strong>Numéro de Kbis:</strong> 841 984 828 R.C.S Paris</li>
+                <li><strong>Ville:</strong> Paris</li>
+            </ul>
+            <button class="edit-btn">Modifier mes informations</button>
+            <button class="edit-btn">Modifier mon mot de passe</button>
         </div>
     </div>
 
-    <!-- Section des réservations récentes -->
-    <div class="bookings-section">
+    <!-- Réservations récentes -->
+    <section class="bookings-section">
         <h3>Dernières locations</h3>
-        <div class="booking-card">
+        <article class="booking-card">
             <div class="info">
                 <span class="vehicle">Renault Master</span>
-                <span class="duration">
-            <span>⏳</span> 2 jours
-          </span>
+                <span class="duration"><span aria-hidden="true">⏳</span> 2 jours</span>
             </div>
-            <span class="date">15 Mars 2024</span>
-        </div>
-    </div>
+            <time datetime="2024-03-15" class="date">15 Mars 2024</time>
+        </article>
+    </section>
 
-    <!-- Section des avantages fidélité -->
-    <div class="benefits-section">
-        <h3>Avantages fidélité</h3>
-        <div class="benefit-card">
-            <span class="points">200 points</span>
-            <p class="benefit-description">-10% sur votre prochaine location</p>
-        </div>
-        <div class="benefit-card">
-            <span class="points">500 points</span>
-            <p class="benefit-description">Une journée de location offerte</p>
-        </div>
-    </div>
+    <!-- Mes Contributions -->
+    <section class="cagnottes-section">
+        <h3>Mes contributions</h3>
+        <ul>
+            <li>Cagnotte pour l'achat d'une camionnette - 100€</li>
+            <li>Cagnotte pour l'achat de matériel de plomberie - 50€</li>
+        </ul>
+    </section>
+
+
 </div>
 </body>
 </html>
