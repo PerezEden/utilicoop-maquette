@@ -1,0 +1,203 @@
+
+    /* Style global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8fafc;
+    color: #333;
+}
+
+.max-w-7xl {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.p-6 {
+    padding: 1.5rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-gray-600 {
+    color: #4a5568;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.md\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.space-x-3 {
+    margin-right: 0.75rem;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-blue-600 {
+    color: #27ae60;
+}
+
+.bg-gray-200 {
+    background-color: #edf2f7;
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.h-2 {
+    height: 0.5rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.bg-blue-600 {
+    background-color: #27ae60;
+}
+
+/* Modifier les classes CSS sans les antislashs */
+.hover\:bg-blue-700:hover {
+    background-color: #27ae60;
+}
+
+.transition-colors {
+    transition: background-color 0.3s;
+}
+
+.focus\:ring-blue-500:focus {
+    outline: 2px solid #27ae60;
+}
+
+.focus\:border-blue-500:focus {
+    border-color: #27ae60;
+}
+
+.mr-1 {
+    margin-right: 0.25rem;
+}
+/* Rétrécir les icônes SVG */
+svg {
+    width: 20px;  /* Réduit la taille */
+    height: 20px; /* Réduit la taille */
+}
+    img {
+        max-width: 100%; /* L'image ne dépassera jamais la largeur de son conteneur */
+        height: 150px; /* Maintient les proportions de l'image */
+
+        border-radius: 8px; /* Arrondi des coins de l'image (facultatif) */
+    }
+
+    /* Barre de navigation */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #73be6f; /* Vert principal */
+        padding: 1rem 2rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo */
+    header .logo {
+        width: 120px; /* Taille ajustée */
+        height: auto;
+    }
+
+    /* Navigation */
+    nav ul {
+        display: flex;
+        gap: 2rem; /* Espacement entre les liens */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        color: #fff; /* Blanc pour les liens */
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: color 0.3s ease, text-decoration 0.3s ease;
+    }
+
+    /* Effet au survol */
+    nav ul li a:hover {
+        color: #ffd700; /* Couleur dorée au survol */
+        text-decoration: underline;
+    }
+
+    /* Styles responsive */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav ul {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        header .logo {
+            margin-bottom: 1rem; /* Espacement entre le logo et le menu */
+        }
+    }
+
+
+
+
