@@ -197,6 +197,38 @@ svg {
             margin-bottom: 1rem; /* Espacement entre le logo et le menu */
         }
     }
+    .input-montant {
+        width: 95%; /* L'input occupe toute la largeur disponible */
+        padding: 12px; /* Ajouter de l'espace autour du texte */
+        border: 2px solid #ccc; /* Bordure grise légère */
+        border-radius: 8px; /* Bords arrondis */
+        font-size: 16px; /* Taille du texte */
+        color: #333; /* Couleur du texte */
+        background-color: #f9f9f9; /* Fond clair */
+        transition: border 0.3s ease; /* Transition pour la couleur de bordure */
+    }
+
+    .input-montant:focus {
+        border-color: #4CAF50; /* Couleur de la bordure lorsqu'on clique dedans */
+        outline: none; /* Enlever le contour par défaut */
+    }
+
+    .btn-participer {
+        width: 100%; /* Le bouton occupe toute la largeur disponible */
+        padding: 12px; /* Ajouter de l'espace autour du texte */
+        background-color: #73be6f; /* Couleur de fond bleu */
+        color: white; /* Texte en blanc */
+        border: none; /* Pas de bordure par défaut */
+        border-radius: 8px; /* Bords arrondis */
+        font-size: 16px; /* Taille du texte */
+        cursor: pointer; /* Le curseur devient une main */
+        transition: background-color 0.3s ease; /* Transition pour la couleur de fond */
+    }
+
+    .btn-participer:hover {
+        background-color: #4CAF50; /* Couleur de fond lors du survol */
+    }
+
 
 
 

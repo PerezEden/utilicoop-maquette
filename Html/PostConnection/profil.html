@@ -29,7 +29,27 @@
     <div class="profile-card">
         <div class="profile-header">
             <div class="icon">👤</div>
-            <h2>Jean Dupont</h2>
+            <h2>
+                Jean Dupont
+                <span class="premium-star" aria-label="Utilisateur premium" title="Utilisateur premium">
+        <a href="#" onclick="showPremiumModal()">★</a>
+    </span>
+            </h2>
+
+            <!-- Modal pour les avantages -->
+            <div id="premium-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="hidePremiumModal()">&times;</span>
+                    <h3>Avantages de l'abonnement Premium</h3>
+                    <ul>
+                        <li>Accès prioritaire aux réservations</li>
+                        <li>Tarifs réduits sur les locations</li>
+                        <li>Support client dédié</li>
+                        <li>Offres spéciales pour les abonnés</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
 
         <!-- Section Informations Utilisateur -->
@@ -63,10 +83,32 @@
     <section class="cagnottes-section">
         <h3>Mes contributions</h3>
         <ul>
-            <li>Cagnotte pour l'achat d'une camionnette - 100€</li>
-            <li>Cagnotte pour l'achat de matériel de plomberie - 50€</li>
+            <li>Cagnotte pour l'achat : Renault Trafic - 800€</li>
+            <li>Cagnotte pour l'achat : Renault Master - 250€</li>
         </ul>
     </section>
+
+
+
+<!--Script pour le modal-->
+    <script>
+        function showPremiumModal() {
+            document.getElementById("premium-modal").style.display = "flex";
+        }
+
+        function hidePremiumModal() {
+            document.getElementById("premium-modal").style.display = "none";
+        }
+
+        // Fermer le modal si on clique en dehors de son contenu
+        window.onclick = function(event) {
+            const modal = document.getElementById("premium-modal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
 
 
 </div>

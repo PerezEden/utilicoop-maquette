@@ -1,0 +1,181 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barre de navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #73be6f; /* Vert principal */
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+header .logo {
+    width: 120px; /* Taille ajustée */
+    height: auto;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    gap: 2rem; /* Espacement entre les liens */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff; /* Blanc pour les liens */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Effet au survol */
+nav ul li a:hover {
+    color: #ffd700; /* Couleur dorée au survol */
+    text-decoration: underline;
+}
+
+/* Styles responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    header .logo {
+        margin-bottom: 1rem; /* Espacement entre le logo et le menu */
+    }
+}
+
+/* Conteneur pour le formulaire */
+.max-w-7xl {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles du formulaire */
+input[type="date"], select {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+}
+
+/* Carte des utilitaires */
+.utilitaire-card {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.utilitaire-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.select-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-btn:hover {
+    background-color: #0056b3;
+}
+
+.select-btn.selected {
+    background-color: #28a745;
+}
+
+/* Message de confirmation */
+#confirmation-message {
+    display: none;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Ajouter une animation d'apparition pour les alertes */
+.hidden {
+    display: none;
+}
+
+.alert {
+    position: fixed;
+    top: 20px;  /* Espacement du haut de la page */
+    left: 50%;
+    transform: translateX(-50%);  /* Centrer horizontalement */
+    width: 90%;  /* Largeur de l'alerte */
+    max-width: 500px;  /* Largeur maximale de l'alerte */
+    opacity: 0;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+    z-index: 9999;  /* S'assurer que l'alerte apparaît au-dessus des autres éléments */
+}
+
+/* Animation pour faire apparaître l'alerte */
+.alert.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px); /* Animation pour une légère descente */
+}
+
+/* Personnalisation des alertes */
+#success-alert {
+    background-color: #4CAF50; /* Vert */
+    color: white;
+}
+
+#error-alert {
+    background-color: #f44336; /* Rouge */
+    color: white;
+}

@@ -1,10 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Reservation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation d'un utilitaire</title>
+    <link rel="stylesheet" href="../../CSS/reservation.css"> <!-- Lien vers ton fichier CSS -->
 </head>
 <body>
+
+<!-- Header -->
+<header>
+    <a href="cagnottes.html">
+        <img src="../../Images/logo.png" alt="Logo UtiliCoop" class="logo">
+    </a>
+    <nav>
+        <ul>
+            <li><a href="reservation.html">Réserver</a></li>
+            <li><a href="membres.html">Annuaire</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="cagnottes.html">Cagnottes</a></li>
+            <li><a href="../index.html">Déconnexion</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="max-w-7xl">
+    <!-- Partie sélection des dates -->
+    <h2 class="text-2xl font-bold mb-6">Sélectionnez vos dates</h2>
+    <div class="flex justify-between mb-6">
+        <div class="flex flex-col w-full mr-4">
+            <label for="date-debut" class="text-sm font-medium text-gray-700">Date de début</label>
+            <input type="date" id="date-debut" name="date_debut" required class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+        <div class="flex flex-col w-full">
+            <label for="date-fin" class="text-sm font-medium text-gray-700">Date de fin</label>
+            <input type="date" id="date-fin" name="date_fin" required class="block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+        </div>
+    </div>
+
+    <!-- Partie sélection des utilitaires -->
+    <h2 class="text-2xl font-bold mb-6">Choisissez un utilitaire</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <!-- Utilitaire 1 -->
+        <div class="utilitaire-card">
+            <img src="../../Images/renault-trafic.jpg" alt="Renault Trafic" class="w-full rounded-md">
+            <h3 class="text-center mt-2 font-semibold">Renault Trafic</h3>
+            <button type="button" class="select-btn" data-utilitaire="renault-trafic">Sélectionner</button>
+        </div>
+
+        <!-- Utilitaire 2 -->
+        <div class="utilitaire-card">
+            <img src="../../Images/renault-master.jpg" alt="Renault Master" class="w-full rounded-md">
+            <h3 class="text-center mt-2 font-semibold">Renault Master</h3>
+            <button type="button" class="select-btn" data-utilitaire="renault-master">Sélectionner</button>
+        </div>
+
+        <!-- Utilitaire 3 -->
+        <div class="utilitaire-card">
+            <img src="../../Images/renault-kangoo-van.jpg" alt="Renault Kangoo" class="w-full rounded-md">
+            <h3 class="text-center mt-2 font-semibold">Renault Kangoo</h3>
+            <button type="button" class="select-btn" data-utilitaire="renault-kangoo">Sélectionner</button>
+        </div>
+    </div>
+
+    <!-- Bouton Réserver -->
+    <div class="mb-4">
+        <button id="reserver-btn" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors" disabled>
+            Réserver
+        </button>
+    </div>
+
+    <!-- Message de confirmation -->
+    <div id="confirmation-message" class="hidden mt-4 p-4 bg-green-500 text-white rounded-md">
+        Réservation confirmée ! Merci de votre choix.
+    </div>
+</div>
+
+<!-- Message de succès -->
+<div id="success-alert" class="hidden mt-4 p-4 bg-green-500 text-white rounded-md">
+    Réservation confirmée ! Merci de votre choix.
+</div>
+
+<!-- Message d'erreur -->
+<div id="error-alert" class="hidden mt-4 p-4 bg-red-500 text-white rounded-md">
+    La réservation ne peut pas dépasser 3 jours.
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Variable pour stocker l'utilitaire sélectionné
+    let selectedUtilitaire = '';
+
+    // Fonction pour gérer la sélection d'un utilitaire
+    document.querySelectorAll('.select-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            // Enlever la classe "selected" de tous les boutons
+            document.querySelectorAll('.select-btn').forEach(btn => btn.classList.remove('selected'));
+
+            // Ajouter la classe "selected" au bouton cliqué
+            this.classList.add('selected');
+
+            // Mettre à jour la variable selectedUtilitaire
+            selectedUtilitaire = this.getAttribute('data-utilitaire');
+
+            // Activer le bouton Réserver
+            document.getElementById('reserver-btn').disabled = false;
+        });
+    });
+
+    // Fonction pour gérer la soumission de la réservation
+    // Fonction pour gérer la soumission de la réservation
+    document.getElementById('reserver-btn').addEventListener('click', function() {
+        // Récupérer les dates
+        const dateDebut = document.getElementById('date-debut').value;
+        const dateFin = document.getElementById('date-fin').value;
+
+        // Vérifier si les dates sont valides
+        if (dateDebut && dateFin) {
+            // Calculer la différence en jours entre les deux dates
+            const dateDebutObj = new Date(dateDebut);
+            const dateFinObj = new Date(dateFin);
+            const diffTime = dateFinObj - dateDebutObj;
+            const diffDays = diffTime / (1000 * 3600 * 24);
+
+            // Vérifier si la réservation dépasse 3 jours
+            if (diffDays > 3) {
+                // Afficher une alerte d'erreur
+                document.getElementById('error-alert').classList.remove('hidden');
+                document.getElementById('success-alert').classList.add('hidden');
+            } else {
+                // Afficher une alerte de succès
+                document.getElementById('success-alert').classList.remove('hidden');
+                document.getElementById('error-alert').classList.add('hidden');
+
+                // Réinitialiser le formulaire après la confirmation
+                setTimeout(() => {
+                    // Réinitialiser les dates
+                    document.getElementById('date-debut').value = '';
+                    document.getElementById('date-fin').value = '';
+
+                    // Désélectionner l'utilitaire
+                    document.querySelectorAll('.select-btn').forEach(btn => btn.classList.remove('selected'));
+                    selectedUtilitaire = ''; // Réinitialiser la variable de sélection
+
+                    // Désactiver le bouton Réserver
+                    document.getElementById('reserver-btn').disabled = true;
+
+                    // Cacher l'alerte après quelques secondes
+                    document.getElementById('success-alert').classList.add('hidden');
+                }, 5000); // Attendre 2 secondes avant de réinitialiser
+            }
+        } else {
+            // Si les dates ne sont pas valides, afficher une alerte
+            alert("Veuillez sélectionner des dates valides.");
+        }
+    });
+</script>
 
 </body>
 </html>
