@@ -1,6 +1,6 @@
 /* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Tw Cen MT, sans-serif;
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
@@ -38,7 +38,7 @@ nav ul li {
 nav ul li a {
     color: #fff; /* Blanc pour les liens */
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }

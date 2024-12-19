@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Electrolize', sans-serif;
+    font-family: 'Tw Cen MT', sans-serif;
 }
 .background-image {
     background-image: url("../Images/pp.jpg"); /* Remplace par le chemin de ton image */
@@ -59,7 +59,7 @@ section h2 {
 }
 
 section p {
-    font-size: 16px;
+    font-size: 20px;
     color: #555;
 }
 
