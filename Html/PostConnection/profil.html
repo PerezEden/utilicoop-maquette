@@ -15,7 +15,7 @@
     </a>
     <nav>
         <ul>
-            <li><a href="reservation.html">Reserver</a></li>
+            <li><a href="reservation.html">Réserver</a></li>
             <li><a href="membres.html">Annuaire</a></li>
             <li><a href="profil.html">Profil</a></li>
             <li><a href="cagnottes.html">Cagnottes</a></li>
@@ -37,18 +37,21 @@
             </h2>
 
             <!-- Modal pour les avantages -->
-            <div id="premium-modal" class="modal">
+            <div id="premium-modal" class="modal" aria-hidden="true">
                 <div class="modal-content">
-                    <span class="close-btn" onclick="hidePremiumModal()">&times;</span>
-                    <h3>Avantages de l'abonnement Premium</h3>
+                    <button class="close-btn" onclick="hidePremiumModal()" aria-label="Fermer le modal">&times;</button>
+                    <h3><span class="star-emoji">🎉</span> Avantages de l'abonnement Premium</h3>
                     <ul>
-                        <li>Accès prioritaire aux utilitaires</li>
-                        <li>Assurance étendue</li>
-                        <li>Support client dédié (réponse plus rapide avec assistance personnalisé)</li>
-                        <li>Promotion chez nos magasins partenaire</li>
+                        <li><span class="checkmark">✅</span> Accès prioritaire aux utilitaires</li>
+                        <li><span class="checkmark">✅</span> Assurance étendue</li>
+                        <li><span class="checkmark">✅</span> Support client dédié</li>
+                        <li><span class="checkmark">✅</span> Promotion chez nos magasins partenaires</li>
                     </ul>
                 </div>
             </div>
+
+
+
 
         </div>
 

@@ -230,6 +230,16 @@ nav ul li a:hover {
     opacity: 1;
 }
 
+ul {
+    padding-left: 20px; /* Ajoute un peu d'espace avant les éléments */
+}
+
+li {
+    margin-bottom: 10px; /* Ajoute de l'espace entre chaque élément */
+    display: flex;
+    align-items: center; /* Aligne verticalement l'emoji et le texte */
+}
+
 
 
 
